@@ -5,6 +5,7 @@
 
 # Node artifact files
 node_modules/
+config/default.json
 dist/
 
 # Compiled Java class files
@@ -25,6 +26,9 @@ dist/
 
 # JetBrains IDE
 .idea/
+
+# JetBrains IDE
+.env/
 
 # Unit test reports
 TEST*.xml

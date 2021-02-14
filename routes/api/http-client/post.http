@@ -1,0 +1,93 @@
+POST http://localhost:9999/api/users HTTP/1.1
+content-type: application/json"
+
+{
+    "name": "Deepak Kumar",
+    "email": "dpk1391981@gmail.com",
+    "password": "dpk@1391981"
+}
+
+
+
+###
+POST http://localhost:5000/api/auth HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sandeep.kumar@instant.com",
+    "password": "dpk@1391981"
+}
+###
+POST http://localhost:5000/api/profile HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY3ODE4ZmFjYmFhY2QyZDU1YWY2OGJhIn0sImlhdCI6MTYwMTc5NzQyNCwiZXhwIjoxNjAyMTU3NDI0fQ.oVipafW6rmb29K6_siIdG4wTyyY7zv-njV-CaQ4yGkA
+
+{
+    "company": "Instant System Inc.",
+    "status": "Developer",
+    "skills": "HTML, PHP, Node js, Ruby,React",
+    "website": "https://mongoosejs.com/docs/populate.html",
+    "location": "Noida",
+    "bio": "Hey!! I am Product Manager",
+    "githubusername": "sandeeprepo",
+    "youtube": "https://youtube.com/sandeeprepo",
+    "facebook": "https://facebook.com/sandeeprepo",
+    "instagram": "https://instagram.com/sandeeprepo",
+    "twitter": "https://twitter.com/sandeeprepo",
+    "linkedin": "https://linkedin.com/sandeeprepo"
+}
+
+###
+PUT  http://localhost:5000/api/profile/experience HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZjBjMjU1ZTQ4MTIzY2ZlYWVhZWI3In0sImlhdCI6MTYwMTExMzIyNCwiZXhwIjoxNjAxNDczMjI0fQ.yLaceJuWk7cnlcp7vH4N7oSbkeLZZVTQiWCV6fV0exM
+
+{
+    "title": "Developer",
+    "company": "Test2234 System Inc.",
+    "location": "Noida",
+    "from": "07-09-2017",
+    "current": "true",
+    "description": "Handle product and team"
+    
+}
+
+###
+PUT  http://localhost:5000/api/profile/education HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZmOTk1ZDBmZGJlMzZkNmJjNjA5N2FkIn0sImlhdCI6MTYxMDE5MjMzNiwiZXhwIjoxNjEwNTUyMzM2fQ.JBtR6NT93Xgv44rCB3lILTEgAWi6MSSEMOmwtkUJNZM
+
+{
+    "school": "RPVV Link Road",
+    "degree": "Diploma1",
+    "fieldofstudy": "Engineer",
+    "from": "07-09-2017",
+    "current": "true",
+    "description": "Handle product and team"
+    
+}
+###
+
+POST http://localhost:5000/api/posts HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZjBjMjU1ZTQ4MTIzY2ZlYWVhZWI3In0sImlhdCI6MTYwMTExMzIyNCwiZXhwIjoxNjAxNDczMjI0fQ.yLaceJuWk7cnlcp7vH4N7oSbkeLZZVTQiWCV6fV0exM
+
+{
+    "text": "This is new 1234534"
+}
+###
+
+PUT  http://localhost:5000/api/posts/like/5f703d6ee047c841401bb476 HTTP/1.1 HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZjBjMjU1ZTQ4MTIzY2ZlYWVhZWI3In0sImlhdCI6MTYwMTExMzIyNCwiZXhwIjoxNjAxNDczMjI0fQ.yLaceJuWk7cnlcp7vH4N7oSbkeLZZVTQiWCV6fV0exM
+###
+
+PUT  http://localhost:5000/api/posts/dislike/5f703d6ee047c841401bb476 HTTP/1.1 HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZjBjMjU1ZTQ4MTIzY2ZlYWVhZWI3In0sImlhdCI6MTYwMTExMzIyNCwiZXhwIjoxNjAxNDczMjI0fQ.yLaceJuWk7cnlcp7vH4N7oSbkeLZZVTQiWCV6fV0exM
+###
+POST http://localhost:5000/api/posts/comment/5f703d6ee047c841401bb476 HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZjBjMjU1ZTQ4MTIzY2ZlYWVhZWI3In0sImlhdCI6MTYwMTExMzIyNCwiZXhwIjoxNjAxNDczMjI0fQ.yLaceJuWk7cnlcp7vH4N7oSbkeLZZVTQiWCV6fV0exM
+
+{
+    "text": "Removing...ssss."
+}
